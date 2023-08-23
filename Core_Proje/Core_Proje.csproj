@@ -1,0 +1,73 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="wwwroot\argon-dashboard-master\**" />
+    <Content Remove="wwwroot\argon-dashboard-master\**" />
+    <EmbeddedResource Remove="wwwroot\argon-dashboard-master\**" />
+    <None Remove="wwwroot\argon-dashboard-master\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="ViewComponents\Dashboard\AdminNotificationNavbarList1.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Views\Shared\Components\AboutList\Default.cshtml" />
+    <None Include="Views\Shared\Components\ContactDetails\Default.cshtml" />
+    <None Include="Views\Shared\Components\ExperienceList\Default.cshtml" />
+    <None Include="Views\Shared\Components\FeatureList\Default.cshtml" />
+    <None Include="Views\Shared\Components\FeatureStatistics\Default.cshtml" />
+    <None Include="Views\Shared\Components\Last5Projects\Default.cshtml" />
+    <None Include="Views\Shared\Components\MessageList\Default.cshtml" />
+    <None Include="Views\Shared\Components\PortfolioList\Default.cshtml" />
+    <None Include="Views\Shared\Components\ProjectList\Default.cshtml" />
+    <None Include="Views\Shared\Components\SendMessage\Default.cshtml" />
+    <None Include="Views\Shared\Components\ServiceList\Default.cshtml" />
+    <None Include="Views\Shared\Components\SkillList\Default.cshtml" />
+    <None Include="Views\Shared\Components\SlideList\Default.cshtml" />
+    <None Include="Views\Shared\Components\StatisticsDashboard2\Default.cshtml" />
+    <None Include="Views\Shared\Components\TestimonialList\Default.cshtml" />
+    <None Include="Views\Shared\Components\ToDoListPanel\Default.cshtml" />
+    <None Include="Views\Shared\Components\VisitorMap\Default.cshtml" />
+    <None Include="Views\Shared\Error.cshtml" />
+    <None Include="Views\Shared\_AdminLayout.cshtml" />
+    <None Include="Views\Shared\_Layout.cshtml" />
+    <None Include="Views\Shared\_NewAdminLayout.cshtml" />
+    <None Include="Views\Shared\_ValidationScriptsPartial.cshtml" />
+    <None Include="Views\Shared\_WriterLayout.cshtml" />
+    <None Include="wwwroot\404-error-page-master\README.md" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentValidation.AspNetCore" Version="10.4.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="5.0.12" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.12" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.12">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.12" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.12">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="5.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BusinessLayer\BusinessLayer.csproj" />
+    <ProjectReference Include="..\DataAccessLayer\DataAccessLayer.csproj" />
+    <ProjectReference Include="..\EntityLayer\EntityLayer.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Areas\Writer\Data\" />
+    <Folder Include="wwwroot\UserImage\" />
+  </ItemGroup>
+
+</Project>
